@@ -1,5 +1,8 @@
 # Raspi Manager
-Simple Android application for rebooting, shutting down and sending simple commands to my raspberry over a local network. The applicatoin is not secure, it uses a simple TPC connection with non encrypted data. A python script on the raspberry pi acts as a TPC server listening on port 8080. 
+Simple Android application for rebooting, shutting down and sending simple commands to my raspberry over a local network. 
+I use this when I have not access to a SSH connection and want to manage my raspberry in a quick way.  
+
+The applicatoin is not secure, it uses a simple TPC connection with non encrypted data. A python script on the raspberry pi acts as a TPC server listening on port 8080. 
 
 
 ## Additions
