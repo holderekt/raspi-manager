@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coolBackground">
+
+    <Button
+        android:id="@+id/reboot"
+        android:layout_width="289dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/button_bg"
+        android:backgroundTint="#CCFF90"
+        android:stateListAnimator="@animator/sample"
+        android:text="@string/button_reboot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/shutdown"
+        android:layout_width="289dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_bg"
+        android:backgroundTint="#FF9E80"
+        android:stateListAnimator="@animator/sample"
+        android:text="@string/button_shutdown"
+        app:layout_constraintEnd_toEndOf="@+id/reboot"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/reboot"
+        app:layout_constraintTop_toBottomOf="@+id/reboot" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="139dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/rounded_text"
+        android:fontFamily="monospace"
+        android:text="@string/input_address"
+        android:textAlignment="textEnd"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="138dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_text"
+        android:fontFamily="monospace"
+        android:text="@string/input_port"
+        android:textAlignment="textEnd"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/ip"
+        android:layout_width="151dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/rounded_input_text"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="192.168.1.1"
+        android:inputType="textPersonName"
+        android:textAlignment="viewStart"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/port"
+        android:layout_width="151dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/rounded_input_text"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="8080"
+        android:inputType="textPersonName"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFF"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="138dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_text"
+        android:fontFamily="monospace"
+        android:text="@string/input_name"
+        android:textAlignment="textEnd"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="138dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_text"
+        android:fontFamily="monospace"
+        android:text="@string/input_pass"
+        android:textAlignment="textEnd"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="151dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/rounded_input_text"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="*******"
+        android:inputType="textPassword"
+        android:textColor="@color/coolBlack"
+        android:textCursorDrawable="@drawable/color_cursor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="151dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/rounded_input_text"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="mario"
+        android:inputType="textPersonName"
+        android:textColor="@color/coolBlack"
+        android:textCursorDrawable="@drawable/color_cursor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

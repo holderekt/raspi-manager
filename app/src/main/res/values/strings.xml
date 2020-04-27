@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RaspiManager</string>
+    <string name="button_shutdown">Shutdown</string>
+    <string name="button_reboot">Reboot</string>
+    <string name="input_address">IP Address</string>
+    <string name="input_port">Port</string>
+    <string name="input_pass">Password</string>
+    <string name="input_name">Username</string>
+    <string name="password">Password</string>
+</resources>
