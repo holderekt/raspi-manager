@@ -14,10 +14,6 @@
             android:propertyName="scaleY"
             android:valueTo="1.1"
             android:valueType="floatType" />
-        <objectAnimator
-            android:duration="100"
-            android:propertyName="backgroundTint"
-            />
     </set>
 </item>
 
