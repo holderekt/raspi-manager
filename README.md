@@ -16,7 +16,6 @@ Things I will probably add in the future. This is a simple app I built for my pe
 - [ ] Raspberry PI response
 - [ ] Sidebar 
 - [ ] Load / Save configuration file
-- [ ] Better server script in C
 - [ ] User settings on server
 
 
