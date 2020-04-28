@@ -17,6 +17,7 @@ import java.net.InetAddress;
 import java.net.NoRouteToHostException;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.Base64;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
@@ -25,6 +26,8 @@ public class MainFragment extends Fragment {
     private View thisfragment;
     Map<String, EditText> inputs = new HashMap<>();
     EditText command;
+    Base64.Encoder encoder = Base64.getEncoder();
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -67,7 +70,7 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 try {
-                    sendCommand(loadConnection(), command.getText().toString());
+                    sendCommand(loadConnection(), command.getText().toString().replaceAll("\"", "\'"));
                 } catch (UnknownHostException e) {
                     e.printStackTrace();
                 }
@@ -120,12 +123,11 @@ public class MainFragment extends Fragment {
         @Override
         public void run() {
             try {
-                if(data.IP.isReachable(5)){
+                if(data.IP.isReachable(10)){
                     sock = new Socket(data.IP, data.PORT);
-
                     System.out.println(data.toJsonString());
                     DataOutputStream dout =new DataOutputStream(sock.getOutputStream());
-                    dout.write(data.toJsonString().getBytes());
+                    dout.write(encoder.encode(data.toJsonString().getBytes()));
                     dout.flush();
                     dout.close();
                     sock.close();

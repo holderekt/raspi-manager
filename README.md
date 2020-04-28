@@ -6,16 +6,14 @@ Simple Android application for rebooting, shutting down and sending simple comma
 
 <img src="./images/image.png" style="float: right;" width="300"/>
 Things I will probably add in the future. This is a simple app I built for my personal use, for now it has all the functionalities I need.    
-    
 
 
-    
-- [ ] Secure connection
-- [ ] Raspberry PI response
-- [ ] Sidebar 
-- [ ] Load / Save configuration file
-- [ ] Better server script in C
-- [ ] User settings on server
+- Secure connection
+- Raspberry PI response
+- Sidebar 
+- Load / Save configuration file
+- Better server script in C
+- User settings on server
 
 
     

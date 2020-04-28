@@ -1,0 +1,3 @@
+{
+    "commands" : ["ls", "cat", "touch"]
+}
